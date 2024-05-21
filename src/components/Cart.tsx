@@ -18,6 +18,8 @@ export default function Cart() {
             quantity:10
         }
     ]
+
+
   
   return (
     <section className="w-1/2 items-center">
@@ -38,6 +40,10 @@ export default function Cart() {
               item: "Gulab Jamun",
               quantity:10
           }} />
+
+          {
+            items.map((item)=> <MenuItem key={item.id} items={item}/>)
+          }
     </section>
   );
 }
