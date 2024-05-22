@@ -6,8 +6,11 @@ const Signup = () => {
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.log(email);
-    console.log(password);
+    const target = e.target as HTMLFormElement;
+    console.log(target, {
+      email,
+      password
+    })
   };
 
   return (
