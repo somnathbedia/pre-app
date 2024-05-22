@@ -1,12 +1,17 @@
-import Signin from './components/Signin';
+import WelComeMessage from "./components/WelcomeMessage";
 
 function App() {
- 
   return (
     <>
-      <Signin/>
+      <WelComeMessage
+        isLoggedIn={true}
+        user={{
+          email: "somnathbedia7@gmail.com",
+          role: "user",
+        }}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
