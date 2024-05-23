@@ -1,14 +1,19 @@
 import { FC } from "react";
 
 type TodoProp = {
-    todo: {
-        id: number,
-        title: string,
-    }
-}
+  id: number;
+  title: string;
+};
 
-const Todos: FC<TodoProp> = ({todo}) => {
-    return <h1>{ todo.title}</h1>
-}
+const Todos: FC<TodoProp> = ({ id, title }) => {
+ 
+    
+  return (
+    <li className="list-none">
+      <h1>{id}</h1>
+      <p>{title}</p>
+    </li>
+  );
+};
 
 export default Todos;
