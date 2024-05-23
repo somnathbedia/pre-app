@@ -1,15 +1,17 @@
-import WelComeMessage from "./components/WelcomeMessage";
+import { useState } from "react";
+import Text from "./components/Text";
+
 
 function App() {
+  const [toggle,setToggle] = useState(false)
   return (
     <>
-      <WelComeMessage
-        isLoggedIn={true}
-        user={{
-          email: "somnathbedia7@gmail.com",
-          role: "user",
-        }}
-      />
+      <div>
+        <button onClick={() => {
+          setToggle(!toggle);
+        }}>Comments</button>
+      </div>
+      {toggle && <Text/>}
     </>
   );
 }
